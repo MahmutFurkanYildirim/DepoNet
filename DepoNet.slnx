@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="DepoNet.Business/DepoNet.Business.csproj" />
+  <Project Path="DepoNet.Data/DepoNet.Data.csproj" />
+  <Project Path="DepoNet.Tests/DepoNet.Tests.csproj" />
+  <Project Path="DepoNet/DepoNet.csproj" />
+</Solution>
