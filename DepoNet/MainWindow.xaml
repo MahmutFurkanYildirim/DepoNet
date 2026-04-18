@@ -5,8 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DepoNet"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="DepoNet - Depo Yönetim Sistemi" Height="700" Width="1100"
+        WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!--Stok Menu -->
+        <StackPanel Grid.Column="0" Background="#2d2d2d">
+            <!-- Logo / Başlık -->
+            <TextBlock Text="DepoNet"
+                       Foreground="White"
+                       FontSize="22"
+                       FontWeight="Bold"
+                       Margin="20,20,20,30"
+                       HorizontalAlignment="Center"/>
 
+            <!-- Menü Butonları -->
+            <Button Content="📦  Ürünler"
+                    Style="{StaticResource MenuButtonStyle}"
+                    Command="{Binding UrunlerCommand}"/>
+
+            <Button Content="🔧  Ürün Reçeteleri"
+                    Style="{StaticResource MenuButtonStyle}"
+                    Command="{Binding BOMCommand}"/>
+
+            <Button Content="🏭  Stok"
+                    Style="{StaticResource MenuButtonStyle}"
+                    Command="{Binding StokCommand}"/>
+
+            <Button Content="📋  Siparişler"
+                    Style="{StaticResource MenuButtonStyle}"
+                    Command="{Binding SiparislerCommand}"/>
+
+        </StackPanel>
+            
+        <!-- İçerik Alanı -->
+        <Frame Grid.Column="1"
+               x:Name="MainFrame"
+               NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

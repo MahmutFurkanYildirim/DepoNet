@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using DepoNet.ViewModels;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,8 @@ namespace DepoNet
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = new MainViewModel(MainFrame);
         }
     }
 }

@@ -20,4 +20,8 @@
     <ProjectReference Include="..\DepoNet.Business\DepoNet.Business.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\" />
+  </ItemGroup>
+
 </Project>
